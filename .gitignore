@@ -1,3 +1,6 @@
+/src/main/resources/application.yml
+
+### IDE/Build Tool Files (from Remote/Local) ###
 HELP.md
 .gradle
 build/
@@ -35,5 +38,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-/src/main/resources/application.yml
