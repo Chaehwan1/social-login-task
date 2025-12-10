@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>소셜 로그인 데모</title>
+</head>
+<body>
+<h1>Spring Boot 소셜 로그인 데모 (Kakao)</h1>
+
+<p th:text="${loginStatus}"></p>
+
+<div th:if="${loginStatus == '로그인이 필요합니다.'}">
+    <h2><a href="/oauth2/authorization/kakao">카카오 로그인</a></h2>
+    <p>Spring Security가 이 링크를 통해 인증을 시작합니다.</p>
+</div>
+
+<div th:unless="${loginStatus == '로그인이 필요합니다.'}">
+    <h2><a href="/logout">로그아웃</a></h2>
+</div>
+
+<hr>
+<h3><a href="/h2-console">H2 콘솔 접속</a></h3>
+<p>DB에 사용자 정보가 저장되었는지 확인해 보세요.</p>
+</body>
+</html>
